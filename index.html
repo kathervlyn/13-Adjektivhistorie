@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adjektivhistorie</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script>
+        // model = her skal variabler ligge
+        let personButton = document.getElementById('personDiv');
+        let nameButton = document.getElementById('nameDiv');
+        let actionsButton = document.getElementById('actionsDiv');
+
+        // view      =  Her skal html ligge
+        updateView();
+        function updateView() {
+            document.getElementById('app').innerHTML = /*HTML*/`
+            
+    <div class="back">
+
+        <div class="group">
+            <div>There once was a</div>
+            <div id="personDiv">...</div>
+        </div>
+
+        <div class="group">
+            <div>Whose name was</div>
+            <div id="nameDiv">...</div>
+        </div>
+
+        <div class="group">
+            <div>Who set out to</div>
+            <div id="actionsDiv">...</div>
+        </div>
+
+        <div class="group">
+            <div>The tyrant of the region</div>
+            <div id="dontknowdiv"></div>
+        </div>
+
+        <div>
+            <button onclick="changeWord(1)">Man</button>
+            <button onclick="changeWord(2)">Woman</button>
+            <button onclick="changeWord(3)">Person</button>
+        </div>
+
+        <div>
+            <button onclick="changeWord(4)">Aleksander</button>
+            <button onclick="changeWord(5)">Katarina</button>
+            <button onclick="changeWord(6)">Ashlynn</button>
+        </div>
+
+        <div>
+            <button onclick="changeWord(7)">Defeat</button>
+            <button onclick="changeWord(8)">Kill</button>
+            <button onclick="changeWord(9)">Befriend</button>
+        </div>
+
+    </div>
+    `;
+        }
+
+        // controller       
+        function changeWord(chosenWord) {
+            let personButton = document.getElementById('personDiv');
+            let nameButton = document.getElementById('nameDiv');
+            let actionsButton = document.getElementById('actionsDiv');
+
+            if (chosenWord == 1) {
+                personButton.innerHTML = 'Man';
+            }
+            if (chosenWord == 2) {
+                personButton.innerHTML = 'Woman';
+            }
+            if (chosenWord == 3) {
+                personButton.innerHTML = 'Person';
+            }
+            if (chosenWord == 4) {
+                nameButton.innerHTML = 'Aleksander';
+            }
+            if (chosenWord == 5) {
+                nameButton.innerHTML = 'Katarina';
+            }
+            if (chosenWord == 6) {
+                nameButton.innerHTML = 'Ashlynn';
+            }
+            if (chosenWord == 7) {
+                actionsButton.innerHTML = 'Defeat';
+            }
+            if (chosenWord == 8) {
+                actionsButton.innerHTML = 'Kill';
+            }
+            if (chosenWord == 9) {
+                actionsButton.innerHTML = 'Befriend';
+            }
+        }
+        updateView();
+    </script>
+</body>
+
+</html>
